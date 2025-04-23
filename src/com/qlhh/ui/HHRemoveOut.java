@@ -16,4 +16,11 @@ public class HHRemoveOut {
 	     }
 	     out.flush();
 	 }
-}
+	public void showMessage() {
+		out.println("Chức năng xóa mã hàng đang được sử dụng.");
+	    out.flush();
+	}
+	
+		
+	}
+

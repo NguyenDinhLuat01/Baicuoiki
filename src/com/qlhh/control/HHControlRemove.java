@@ -1,4 +1,4 @@
-package com.qlhh.control;
+/*package com.qlhh.control;
 
 import com.qlhh.database.HHRemoveDAO;
 import com.qlhh.ui.HHRemoveOut;
@@ -28,5 +28,5 @@ import com.qlhh.ui.HHRemoveOut;
 	    	}
 
 	    
-	}
+	}*/
 
