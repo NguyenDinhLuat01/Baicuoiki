@@ -18,4 +18,8 @@ public class HangSanhSu extends HangHoa{
 	public double tinhVAT() {
 		return getdonGia()*0.1;
 	}
-}
+
+	
+		
+	}
+

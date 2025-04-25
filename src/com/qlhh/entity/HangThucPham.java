@@ -1,7 +1,7 @@
 
 package com.qlhh.entity;
 
-public class HangThucPham extends HangHoa{
+public  class HangThucPham extends HangHoa{
 	private int ngaySanXuat;
 	private int ngayHetHan;
 	private String nhaCungCap;

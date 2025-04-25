@@ -38,6 +38,10 @@ public abstract class HangHoa implements Serializable{
 	
 	
 	public abstract double tinhVAT();
+
+	public void setMaHang(int newmaHang) {
+		maHang = newmaHang;
+	}
 	
 	
 }

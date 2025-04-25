@@ -1,11 +1,5 @@
 package com.qlhh.database;
 
-public class HHRemoveDAO {
-
-	public void deleteSomething() {
-		
-	}
-	
-	}
-
-
+public abstract class HHRemoveDAO {
+    public abstract boolean xoaMaHang(int maHang);
+}

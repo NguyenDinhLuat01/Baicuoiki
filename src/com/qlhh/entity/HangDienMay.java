@@ -19,4 +19,8 @@ public class HangDienMay extends HangHoa{
 		return getdonGia()*0.1;
 	
 	}
-}
+
+	
+		
+	}
+

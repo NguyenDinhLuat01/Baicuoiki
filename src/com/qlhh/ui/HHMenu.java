@@ -2,10 +2,12 @@
 package com.qlhh.ui;
 
 import java.io.PrintWriter;
+
 import java.util.Scanner;
 
 import com.qlhh.control.HHControlAdd;
 import com.qlhh.control.HHControlPrint;
+import com.qlhh.control.HHControlRemove;
 import com.qlhh.database.MemoryHHDB;
 
 
@@ -17,14 +19,16 @@ public class HHMenu {
 	private HHInAdd hhInAdd;// buoc 1
 	private HHControlPrint hhControlPrint;
 	private HHControlAdd hhControlAdd;
+	//private HHRemoveInput hhRemoveInput;
+	private HHControlRemove hhControlRemove;
 
 	public void setHHControlPrint(HHControlPrint hhControlPrint) {
  		this.hhControlPrint = hhControlPrint;
  	}
 	
 	
-	HHMenu() {
-
+	public HHMenu() {
+		
 	}
 
 	public HHMenu(PrintWriter out, Scanner in, String prompt) {
@@ -37,8 +41,12 @@ public class HHMenu {
  			HHControlAdd hhControlAdd) {
  		this(out, in, prompt);
  		this.hhControlAdd = hhControlAdd;
+ 		
  	}
-
+	public void setHHControlRemove(HHControlRemove hhControlRemove) {
+		this.hhControlRemove = hhControlRemove;
+ 		//this.hhRemoveInput = hhRemoveInput;
+	}
 	public void controlLoop() {
 		out.println("go lenh \"help\" de duoc ho tro!!!");
 		out.flush();
@@ -68,8 +76,18 @@ public class HHMenu {
 				printALLHH();
 				continue;
 			}
+			if ("remove".equalsIgnoreCase(command)) {
+				remove();
+				continue;
+		}
 		}
 	}
+
+	private void remove() {
+		hhControlRemove.remove();
+		
+	}
+
 
 	private void printALLHH() {
 		hhControlPrint.printHH();

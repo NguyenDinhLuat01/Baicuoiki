@@ -1,12 +1,16 @@
 package com.qlhh.database;
 
-import java.util.ArrayList;
-
 import com.qlhh.entity.HangHoa;
 
 public class MemoryHHRemoveDAO extends HHRemoveDAO {
-
-	public ArrayList<HangHoa> getDSHH(){
-		return MemoryHHDB.getDSHH();
-	}
+    @Override
+    public boolean xoaMaHang(int maHang) {
+        for (HangHoa hh : MemoryHHDB.getDSHH()) {
+            if (hh.getmaHang() == maHang) {
+                MemoryHHDB.getDSHH().remove(hh);
+                return true;
+            }
+        }
+        return false;
+    }
 }
